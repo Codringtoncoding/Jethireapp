@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @plane.name %></h1>
+  <%= link_to "Back to all planes", planes_path %>
+  <br>
+  <%= cl_image_tag @plane.photo, height: 300, width: 400, crop: :fill %>
+
+
+
+</div>

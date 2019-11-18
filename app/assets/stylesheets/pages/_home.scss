@@ -12,6 +12,11 @@
 .title-home{
   font-family: "Open sans";
   color: white;
-  justify-content: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.buttons-home{
+  justify-content: space-around;
   display: flex;
 }

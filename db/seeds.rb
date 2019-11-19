@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Plane.create!(name: "Bombardier Global Express", user: User.first)
+Plane.create!(name: "Embraer Phenom 100", user: User.first)
+Plane.create!(name: "Gulfstream G550", user: User.first)
+
+

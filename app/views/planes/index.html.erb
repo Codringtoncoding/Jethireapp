@@ -1,9 +1,14 @@
-<h1>You are now flying</h1>
-<p>Very High</p>
-
-<div class="container">
-  <label for=""></label>
+<div class="container text-center pt-3">
+  <h1>private jets</h1>
+  <%= link_to "Add a plane" , new_plane_path, class: "btn btn-success" %>
 
 
-
+  <div class="container text-center pt-3">
+   <h2>all planes</h2>
+   <% @planes.each do |plane| %>
+     <div class="card-product">
+        <%= link_to plane.name, plane_path(plane) %>
+      </div>
+   <% end %>
+  </div>
 </div>

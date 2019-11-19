@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   get 'bookings/create'
   get 'bookings/show'
   root to: 'pages#home'
-  resources :planes, only: [:index, :new, :create, :show]
-  resources :bookings, only: [:index, :new, :create, :show]
-
+  resources :planes, only: [:index, :new, :create, :show] do
+    resources :bookings, only: [:index, :new, :create, :show]
+  end
 
 
 

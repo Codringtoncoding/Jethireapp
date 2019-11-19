@@ -1,2 +1,5 @@
-<h1>Planes#new</h1>
-<p>Find me in app/views/planes/new.html.erb</p>
+<h3>Add a new booking</h3>
+<%= simple_form_for [@plane, @booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>

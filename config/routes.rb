@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'bookings/index'
-  get 'bookings/new'
-  get 'bookings/create'
-  get 'bookings/show'
+
   root to: 'pages#home'
-  resources :planes, only: [:index, :new, :create, :show]
-  resources :bookings, only: [:index, :new, :create, :show]
+  resources :planes, only: [:index, :new, :create, :show] do
+    resources :bookings, only: [:new, :create]
+  end
+
+  resources :bookings, only: [:show]
 
 
 

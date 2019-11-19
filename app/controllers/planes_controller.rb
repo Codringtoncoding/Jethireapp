@@ -1,5 +1,6 @@
 class PlanesController < ApplicationController
   def index
+    @planes = Plane.all
   end
 
   def new
@@ -9,7 +10,7 @@ class PlanesController < ApplicationController
   end
 
   def show
-    @plane = plane.find(params[:id])
+
   end
   private
 

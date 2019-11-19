@@ -1,11 +1,12 @@
 <h1>Confirmed!</h1>
 <br>
 <h3>Jet: <%= @booking.plane.name %></h3>
-<div><p>Number of poeple:</p><%= @booking.plane.capacity %></div>
 <br>
-<div><p>Price:</p><%= @booking.plane.price %></div>
+<div>Number of people: <%= @booking.plane.capacity %></div>
 <br>
-<%= link_to "Continue browsing jets!", planes_path, class: "btn btn-primary btn-lg" %>
+<div>Price: £<%= @booking.plane.price %></div>
+<br>
+<%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-primary btn-lg" %>
 
 
 

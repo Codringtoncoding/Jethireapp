@@ -18,5 +18,3 @@ Plane.create!(name: "Bombardier Global Express", user: humphrey, price: 2500, ca
 Plane.create!(name: "Embraer Phenom 100", user: cyril, price: 2000, capacity: 12)
 Plane.create!(name: "Gulfstream G550", user: brigita, price: 1700, capacity: 10)
 Plane.create!(name: "LukeJet 3800 Sport Edition", user: luke, price: 1500, capacity: 8)
-
-

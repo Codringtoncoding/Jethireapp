@@ -1,14 +1,32 @@
-<div class="container text-center pt-3">
-  <h1>private jets</h1>
-  <%= link_to "Add a plane" , new_plane_path, class: "btn btn-success" %>
 
-
-  <div class="container text-center pt-3">
-   <h2>all planes</h2>
-   <% @planes.each do |plane| %>
-     <div class="card-product">
-        <%= link_to plane.name, plane_path(plane) %>
-      </div>
-   <% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
+  <div class="container flex">
+    <link rel="indexstylesheet" href = "_index.scss">
+     <h2>private jets</h2>
+       <div class="container flex">
+          <h3><% @planes.each do |plane| %><h3>
+       <div class="card-product">
+          <img src="https://www.jetcraft.com/wp-content/uploads/2018/09/Global-Express-Ext-Banner-1200x600.jpg" Justify>
+            <h3><%=link_to plane.name, plane_path(plane)%><h3>
+              <ul>
+                <p><%=plane.price%><p>
+                <p><%=plane.capacity%><p>
+              </ul>
+            <div class="card-product-infos">
+              <%= link_to "select jet", "#", class: "btn btn-ghost"%>
+            </div>
+        </div>
+      <%end%>
+    </div>
   </div>
 </div>
+
+
+<!-- <div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+ -->

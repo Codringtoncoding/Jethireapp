@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def new
+
     @booking = Booking.new
     @plane = Plane.find(params[:plane_id])
   end
@@ -18,13 +19,11 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+
   end
 
   def show
-
-    @booking = Booking.find(params[:id])
-
-
+    @booking = Booking.find(params[:id]
   end
 
   private

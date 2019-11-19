@@ -1,5 +1,26 @@
+
 <h3>Add a new booking</h3>
 <%= simple_form_for [@plane, @booking] do |f| %>
   <%= f.input :date %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
+
+
+<p></p>
+<div class="newplane-container">
+ <div class ="plane-input">
+  <div class="div">
+    <h1>Add a new Plane</h1>
+</div>
+
+<div class="div">
+    <p><%= simple_form_for @plane do |f| %>
+     <%= f.input :name %>
+     <%= f.input :capacity %>
+     <%= f.input :price %>
+     <%= link_to "Create Jet", planes_path , class: "btn btn-primary"  %></p>
+    <% end %>
+    </div>
+  </div>
+</div>
+

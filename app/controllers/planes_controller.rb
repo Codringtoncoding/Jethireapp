@@ -1,11 +1,20 @@
 class PlanesController < ApplicationController
   def index
+    @planes = Plane.all
   end
 
   def new
+    @plane = Plane.new
   end
 
   def create
+      @plane = Plane.new(plane_params)
+
+    if @plane.save
+      redirect_to plane_path(@plane)
+    else
+      render :new
+    end
   end
 
   def show
@@ -14,7 +23,8 @@ class PlanesController < ApplicationController
 
   private
 
-  def cocktail_params
-    params.require(:cocktail).permit(:name, :photo)
+  def plane_params
+    # only keep what we want from the params
+    params.require(:plane).permit(:name)
   end
 end

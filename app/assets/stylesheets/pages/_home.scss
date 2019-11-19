@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+.homepage-container {
+
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("https://www.wearefinn.com/media/2008/legacy-500-corporate-jet-overview.jpg");
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.title-home{
+  font-family: "Open sans";
+  color: white;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.buttons-home{
+  justify-content: space-around;
+  display: flex;
+}

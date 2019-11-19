@@ -6,11 +6,11 @@
        <div class="container flex">
           <h3><% @planes.each do |plane| %><h3>
        <div class="card-product">
-          <img src="https://www.jetcraft.com/wp-content/uploads/2018/09/Global-Express-Ext-Banner-1200x600.jpg" Justify>
+           <%= cl_image_tag plane.photo.key, height: 300, width: 400, crop: :fill %>
             <h3><%=link_to plane.name, plane_path(plane)%><h3>
               <ul>
-                <p><%=plane.price%><p>
-                <p><%=plane.capacity%><p>
+                <p>price:   <%=plane.price%><p>
+                <p>capacity:   <%=plane.capacity%><p>
               </ul>
             <div class="card-product-infos">
               <%= link_to "select jet", "#", class: "btn btn-ghost"%>

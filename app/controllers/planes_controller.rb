@@ -8,27 +8,24 @@ class PlanesController < ApplicationController
   end
 
   def create
-      @plane = Plane.new(plane_params)
-
+    @plane = Plane.new(plane_params)
+    @plane.user = current_user
     if @plane.save
       redirect_to plane_path(@plane)
     else
+      # raise
       render :new
     end
   end
 
   def show
-
+    @plane = Plane.find(params[:id])
   end
+
   private
 
   def plane_params
     # only keep what we want from the params
-    params.require(:plane).permit(:name)
+    params.require(:plane).permit(:name, :capacity, :price)
   end
-
- def plane_params
-    params.require(:plane).permit(:name)
-  end
-
 end

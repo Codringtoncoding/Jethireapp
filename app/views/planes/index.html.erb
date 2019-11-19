@@ -1,23 +1,19 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
   <div class="container flex">
-    <link rel="indexstylesheet" href = "_index.scss">
-     <h2>private jets</h2>
-       <div class="container flex">
-          <h3><% @planes.each do |plane| %><h3>
-       <div class="card-product">
-          <img src="https://www.jetcraft.com/wp-content/uploads/2018/09/Global-Express-Ext-Banner-1200x600.jpg" Justify>
-            <h3><%=link_to plane.name, plane_path(plane)%><h3>
-              <ul>
-                <p><%=plane.price%><p>
-                <p><%=plane.capacity%><p>
-              </ul>
-            <div class="card-product-infos">
-              <%= link_to "select jet", "#", class: "btn btn-ghost"%>
-            </div>
+    <h2>private jets</h2>
+    <% @planes.each do |plane| %>
+
+      <div class="card-product">
+        <img src="https://www.jetcraft.com/wp-content/uploads/2018/09/Global-Express-Ext-Banner-1200x600.jpg" />
+        <div class="card-product-infos">
+          <h2><%=plane.name%></h2>
+          <p>Price: £<%=plane.price%></p>
+          <p>Capacity: <%=plane.capacity%></p>
         </div>
-      <%end%>
-    </div>
+          <%= link_to "View details", plane_path(plane), class: "btn btn-light btn-sm" %>
+      </div>
+    <%end%>
   </div>
 </div>
 

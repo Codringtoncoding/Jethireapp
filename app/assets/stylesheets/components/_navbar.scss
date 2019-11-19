@@ -1,28 +1,20 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  height: 50px;
+ justify-content: space-between;
+ background: white;
+ height: 50px;
+ display: flex;
 }
-
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+ flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
-  width: 60px;
-  height: 50px;
-
+ width: 60px;
+ height: 50px;
 }
-
 .sign-in {
-  color: black;
-}
-
-.sign-in:hover {
-  background-color: red;
-  text: ""
+ color: black;
 }
 
 .sign-in.em {
-  color: white;
+ color: white;
 }

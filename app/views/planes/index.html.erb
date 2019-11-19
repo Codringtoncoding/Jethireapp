@@ -2,7 +2,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
   <div class="container flex">
     <link rel="indexstylesheet" href = "_index.scss">
-     <h2>private jets</h1>
+     <h2>private jets</h2>
        <div class="container flex">
           <h3><% @planes.each do |plane| %><h3>
        <div class="card-product">
@@ -13,7 +13,8 @@
                 <p><%=plane.capacity%><p>
               </ul>
             <div class="card-product-infos">
-          </div>
+              <%= link_to "select jet", "#", class: "btn btn-ghost"%>
+            </div>
         </div>
       <%end%>
     </div>

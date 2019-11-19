@@ -8,7 +8,13 @@
 
 Plane.destroy_all
 
-Plane.create!(name: "Bombardier Global Express", user: User.first, price: 100000, capacity: 8)
-Plane.create!(name: "Embraer Phenom 100", user: User.first, price: 50000, capacity: 6)
-Plane.create!(name: "Gulfstream G550", user: User.first, price: 1000000, capacity: 30)
+humphrey = User.create(email: "humphrey@lewagon.com", password: "123456")
+cyril = User.create(email: "cyril@lewagon.com", password: "123456")
+brigita = User.create(email: "brigita@lewagon.com", password: "123456")
+luke = User.create(email: "luke@lewagon.com", password: "123456")
 
+
+Plane.create!(name: "Bombardier Global Express", user: humphrey, price: 2500, capacity: 15)
+Plane.create!(name: "Embraer Phenom 100", user: cyril, price: 2000, capacity: 12)
+Plane.create!(name: "Gulfstream G550", user: brigita, price: 1700, capacity: 10)
+Plane.create!(name: "LukeJet 3800 Sport Edition", user: luke, price: 1500, capacity: 8)

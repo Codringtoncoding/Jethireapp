@@ -8,11 +8,12 @@ class PlanesController < ApplicationController
   end
 
   def create
-      @plane = Plane.new(plane_params)
+    @plane = Plane.new(plane_params)
 
     if @plane.save
       redirect_to plane_path(@plane)
     else
+      raise
       render :new
     end
   end

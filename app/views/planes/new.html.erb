@@ -1,12 +1,6 @@
 
-<h3>Add a new booking</h3>
-<%= simple_form_for [@plane, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
 
 
-<p></p>
 <div class="newplane-container">
  <div class ="plane-input">
   <div class="div">
@@ -18,7 +12,7 @@
      <%= f.input :name %>
      <%= f.input :capacity %>
      <%= f.input :price %>
-     <%= link_to "Create Jet", planes_path , class: "btn btn-primary"  %></p>
+     <%= f.submit "Create jet", class: "btn btn-primary" %>
     <% end %>
     </div>
   </div>

@@ -6,7 +6,7 @@
        <div class="container flex">
           <h3><% @planes.each do |plane| %><h3>
        <div class="card-product">
-           <%= cl_image_tag plane.photo.key, height: 300, width: 400, crop: :fill %>
+           <%#= cl_image_tag plane.photo.key, height: 300, width: 400, crop: :fill %>
             <h3><%=link_to plane.name, plane_path(plane)%><h3>
               <ul>
                 <p>price:   <%=plane.price%><p>

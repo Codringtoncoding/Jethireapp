@@ -1,20 +1,21 @@
+ <body
+  class="body" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
 
-
-
-<div class="newplane-container">
- <div class ="plane-input">
-  <div class="div">
-    <h1>Add a new Plane</h1>
-</div>
-
-<div class="div">
-    <<%= simple_form_for @plane do |f| %>
-     <%= f.input :name %>
-     <%= f.input :capacity %>
-     <%= f.input :price %>
-     <%= f.submit "Create jet", class: "btn btn-primary" %>
-    <% end %>
-    </div>
+  <div class="newplane-container">
+   <div class ="plane-input">
+    <div class="div">
+      <h1>Add a new Plane</h1>
   </div>
-</div>
+
+  <div class="div">
+      <p><%= simple_form_for @plane do |f| %>
+       <%= f.input :name %>
+       <%= f.input :capacity %>
+       <%= f.input :price %>
+       <%= f.submit "Create jet", class: "btn btn-light btn-sm" %>
+      <% end %>
+      </div>
+    </div>
+   </div>
+ </body>
 

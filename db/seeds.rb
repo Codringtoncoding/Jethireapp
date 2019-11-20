@@ -6,13 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Plane.destroy_all
 Booking.destroy_all
-user = User.create(email: 'billjobs@gmail.com', password: 'Coding101')
-plane = Plane.create(name: "Boeing", price: 1000, capacity: 100, user: user)
-
-booking = Booking.create(user: user, plane: plane)
+Plane.destroy_all
+User.destroy_all
 
 
 humphrey = User.create(email: "humphrey@lewagon.com", password: "123456")

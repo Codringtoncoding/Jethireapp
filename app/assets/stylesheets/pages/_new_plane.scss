@@ -1,0 +1,28 @@
+
+//.banner{
+  //background-size:cover
+
+.newplane-container {
+  background-image: url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM2OTY0fQ&w=1000&q=80");
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color:black;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.h1 {
+
+}
+
+.plane-input {
+padding:20px;
+display: flex;
+flex-direction: column;
+}

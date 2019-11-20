@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.plane = @plane
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to booking_path(@booking), notice: "A  confirmation email will be sent to #{current_user.email}"
     else
       render :new
     end
@@ -23,6 +23,10 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+  end
+
+  def dashboard
+    @bookings = Booking.where(user: current_user)
   end
 
   private

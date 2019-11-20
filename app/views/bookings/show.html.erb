@@ -1,16 +1,22 @@
-<div class="container">
-  <br>
-  <h1>Confirmed!</h1>
-    <br>
-      <h3>Jet: <%= @booking.plane.name %></h3>
-      <br>
-      <h5 class="bold-text"><%= @booking.date.strftime('%A, %b %d') %> </h5>
-      <h6 class="bold-text"><%= @booking.time.strftime('%I:%M %p') %> </h6>
-      <br>
-      <h6>Number of people: <%= @booking.plane.capacity %></h6>
-      <br>
-      <h6>Price: £<%= @booking.plane.price %></h6>
-      <br>
-<%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-primary btn-lg" %>
+<body
+  class="body" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
 
+  <div class="show-booking-container">
+    <div class ="confirmation-input">
+  <h1>Confirmed!</h1>
+  </div>
+
+<div class="div">
+  <br>
+    <h3>Jet: <%= @booking.plane.name %></h3>
+      <p>Number of poeple:</p><%= @booking.plane.capacity %>
+    <br>
+  <p>Price:</p><%= @booking.plane.price %>
+  <br>
+  <%= link_to "Create Booking", planes_path, class: "btn btn-light btn-sm" %>
+
+      </div>
+    </div>
+  </div>
 </div>
+</body>

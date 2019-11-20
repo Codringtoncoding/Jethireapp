@@ -13,17 +13,22 @@
   justify-content: center;
   border-radius: 3px;
 }
-
-.div { background-color: #99B3C2;
+.confirmation-input {
+  background-color: #99B3C2;
+  border: 1px solid #c3c3c3;
   margin:20px;
+  padding:20px;
   border-radius: 3px;
-
-
 }
 
-.confirmation-input {
+.div {
   padding:20px;
   display: flex;
   flex-direction: column;
+}
+.btn {
+  margin:10px;
+}
+.booking-data {
 
 }

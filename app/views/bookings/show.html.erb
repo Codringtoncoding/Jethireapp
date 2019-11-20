@@ -1,17 +1,16 @@
-<h1>Confirmed!</h1>
-<br>
-<h3>Jet: <%= @booking.plane.name %></h3>
-<br>
-<div>Number of people: <%= @booking.plane.capacity %></div>
-<br>
-<div>Price: £<%= @booking.plane.price %></div>
-<br>
+<div class="container">
+  <br>
+  <h1>Confirmed!</h1>
+    <br>
+      <h3>Jet: <%= @booking.plane.name %></h3>
+      <br>
+      <h5 class="bold-text"><%= @booking.date.strftime('%A, %b %d') %> </h5>
+      <h6 class="bold-text"><%= @booking.time.strftime('%I:%M %p') %> </h6>
+      <br>
+      <h6>Number of people: <%= @booking.plane.capacity %></h6>
+      <br>
+      <h6>Price: £<%= @booking.plane.price %></h6>
+      <br>
 <%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-primary btn-lg" %>
 
-
-
-
-
-
-
-
+</div>

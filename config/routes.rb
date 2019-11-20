@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:show]
 
-
+resources :planes, only: [:destroy]
 
 
   devise_for :users

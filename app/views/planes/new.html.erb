@@ -3,22 +3,19 @@
 
   <div class="newplane-container">
    <div class ="plane-input">
-    <div class="div">
-      <h1>Add a new Plane</h1>
+
+  <div class="title-list-jet">
+
+    <h1>List Your Jet</h1>
   </div>
 
-  <div class="div">
-
-    <h1>Add a new Plane</h1>
-</div>
-
-<div class="div">
+<div class="form-new-jet">
     <p><%= simple_form_for @plane do |f| %>
      <%= f.input :name %>
      <%= f.input :capacity %>
      <%= f.input :price %>
      <%= f.input :photo, as: :file %>
-     <%= f.submit "Create Jet", class: "btn btn-primary" %>
+     <%= f.submit "List Your Jet", class: "btn btn-primary btn-create" %>
     <% end %>
 
     </div>

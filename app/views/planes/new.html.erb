@@ -8,13 +8,19 @@
   </div>
 
   <div class="div">
-      <p><%= simple_form_for @plane do |f| %>
-       <%= f.input :name %>
-       <%= f.input :capacity %>
-       <%= f.input :price %>
-       <%= f.submit "Create jet", class: "btn btn-light btn-sm" %>
-      <% end %>
-      </div>
+
+    <h1>Add a new Plane</h1>
+</div>
+
+<div class="div">
+    <p><%= simple_form_for @plane do |f| %>
+     <%= f.input :name %>
+     <%= f.input :capacity %>
+     <%= f.input :price %>
+     <%= f.input :photo, as: :file %>
+     <%= f.submit "Create Jet", class: "btn btn-primary" %>
+    <% end %>
+
     </div>
    </div>
  </body>

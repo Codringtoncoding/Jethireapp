@@ -1,6 +1,19 @@
-<h3>Add a new booking</h3>
-<%= simple_form_for [@plane, @booking] do |f| %>
-  <%= f.input :date %>
-  <%= f.input :time %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
+<body
+  class="body" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
+
+  <div class="new-booking-container">
+    <div class ="booking-input">
+      <div class="div">
+    <h3>Add a new booking</h3>
+    </div>
+    <div class="div">
+      <%= simple_form_for [@plane, @booking] do |f| %>
+      <%= f.input :date %>
+      <%= f.input :time %>
+      <%= f.button :submit, class: "btn btn-light btn-sm" %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

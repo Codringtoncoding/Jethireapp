@@ -1,16 +1,25 @@
-<h1>Confirmed!</h1>
-<br>
-<h3>Jet: <%= @booking.plane.name %></h3>
-<div><p>Number of poeple:</p><%= @booking.plane.capacity %></div>
-<br>
-<div><p>Price:</p><%= @booking.plane.price %></div>
-<br>
-<%= link_to "Continue browsing jets!", planes_path, class: "btn btn-primary btn-lg" %>
+<body
+  class="body" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
 
+  <div class="show-booking-container">
+    <div class ="confirmation-input">
+  <h1>Confirmed!</h1>
+  </div>
 
+<div class="div">
+  <br>
+    <h3>Jet: <%= @booking.plane.name %></h3>
+      <p>Number of poeple:</p><%= @booking.plane.capacity %>
+    <br>
+  <p>Price:</p><%= @booking.plane.price %>
+  <br>
+  <%= link_to "Continue browsing jets!", planes_path, class: "btn btn-light btn-sm" %>
 
-
-
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 
 
 

@@ -2,7 +2,7 @@
   <h1><%= @plane.name %></h1>
   <%= link_to "Back to all planes", planes_path %>
   <br>
-  <%= image_tag "https://images.pexels.com/photos/333525/pexels-photo-333525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200", crop: :fill %>
+  <%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill  %>
 
 
 <div class="row">
@@ -24,7 +24,9 @@
       </table>
     </div>
     <div class="col-sm-12 col-md-6">
-
+    <%if @plane.user = current_user%>
+     <%= link_to "Delete", plane_path(@plane), method: :delete, class: "btn btn-light btn-sm" %>
+      <%end%>
     <div><%= link_to "book!", new_plane_booking_path(@plane), class: "btn btn-primary btn-lg"  %></div>
 
   </div>
@@ -33,4 +35,5 @@
 
 
 
+<!-- image_tag "https://images.pexels.com/photos/333525/pexels-photo-333525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=200" -->
 

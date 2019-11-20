@@ -9,12 +9,11 @@
 <div class="confirmation-input">
   <br>
     <h3>Jet: <%= @booking.plane.name %></h3>
-      <br>
-        <p>Number of poeple: <%= @booking.plane.capacity %></p>
-          <br>
-        <p>Price:<%= @booking.plane.price %></p>
-       <br>
-     <%= link_to "Create Booking", planes_path, class: "btn btn-light btn-sm" %>
+      <p>Number of poeple:</p><%= @booking.plane.capacity %>
+    <br>
+  <p>Price:</p><%= @booking.plane.price %>
+  <br>
+  <%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-light btn-sm" %>
 
       </div>
     </div>

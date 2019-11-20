@@ -7,10 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [:show]
-
-  get "dashboard", to: "bookings#dashboard", as: :dashboard
-
-
+  resources :planes, only: [:destroy]
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

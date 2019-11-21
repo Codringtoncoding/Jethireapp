@@ -1,10 +1,14 @@
 .navbar-lewagon {
+ font-family: monospace;
+ font-size: 18px;
  justify-content: space-between;
  background: white;
  height: 50px;
  display: flex;
 }
 .navbar-lewagon .navbar-collapse {
+ font-size: 18px;
+ font-family: monospace;
  flex-grow: 0;
 }
 .navbar-lewagon .navbar-brand img {
@@ -12,8 +16,10 @@
  height: 50px;
 }
 .sign-in {
+ font-size: 10px;
+ font-family: monospace;
  color: black;
  justify-content: center;
- padding-top: 8px;
+ margin: auto;
 }
 

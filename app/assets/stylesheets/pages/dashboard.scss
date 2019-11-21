@@ -1,10 +1,12 @@
 .title-dashboard {
+  font-family: monospace;
   text-align: center;
   color: #EE4266;
   padding: 25px 0;
 }
 
 .cards-dashboard{
+  font-family: monospace;
     overflow: hidden;
     height: 150px;
     background: white;
@@ -21,6 +23,7 @@
 
 
 .card-info {
+  font-family: monospace;
   height: 75%;
   background-color: white;
   border-radius: 5px;
@@ -37,10 +40,12 @@
 }
 
 .bold-text {
+  font-family: monospace;
   font-weight: bold;
 }
 
 .btn-dash {
+  font-family: monospace;
   border-radius: 5px;
   background-color: lightgrey;
   color: white;

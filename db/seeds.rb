@@ -17,8 +17,15 @@ brigita = User.create(email: "brigita@lewagon.com", password: "123456")
 luke = User.create(email: "luke@lewagon.com", password: "123456")
 
 
-Plane.create!(name: "Bombardier Global Express", user: humphrey, price: 2500, capacity: 15)
+Plane.create!(name: "Bombardier Global Express", user: humphrey, price: 2500, capacity: 15, photo: "")
 Plane.create!(name: "Embraer Phenom 100", user: cyril, price: 2000, capacity: 12)
 Plane.create!(name: "Gulfstream G550", user: brigita, price: 1700, capacity: 10)
 Plane.create!(name: "LukeJet 3800 Sport Edition", user: luke, price: 1500, capacity: 8)
+
+
+
+
+Review.create!(content: "test review", rating: 5, plane: Plane.all.sample)
+
+
 

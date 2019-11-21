@@ -7,11 +7,14 @@
         <%= cl_image_tag plane.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
           <h2><%=plane.name%></h2>
+          <br>
           <p>Price: £<%=plane.price%></p>
           <p>Capacity: <%=plane.capacity%> passengers</p>
         </div>
+        <div class="buttons-index">
           <%= link_to "View details", plane_path(plane), class: "btn-flat" %>
-
+          <br>
+          <%= link_to "Book Plane", new_plane_booking_path(plane), class: "btn-flat"  %>
       </div>
     <%end%>
   </div>

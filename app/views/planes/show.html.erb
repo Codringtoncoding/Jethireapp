@@ -27,7 +27,7 @@
     <%if @plane.user = current_user%>
      <%= link_to "Delete", plane_path(@plane), method: :delete, class: "btn btn-light btn-sm" %>
       <%end%>
-    <div><%= link_to "book!", new_plane_booking_path(@plane), class: "btn btn-primary btn-lg"  %></div>
+    <div><%= link_to "Book Plane", new_plane_booking_path(@plane), class: "btn btn-primary btn-lg"  %></div>
 
   </div>
 </div>

@@ -12,14 +12,15 @@ class PlanesController < ApplicationController
     @plane.user = current_user
     if @plane.save
       redirect_to plane_path(@plane)
-    else
-      # raise
-      render :new
+    # else
+    # # raise
+    # render :new
     end
   end
 
   def show
     @plane = Plane.find(params[:id])
+    @review = Review.new
   end
 
   def destroy

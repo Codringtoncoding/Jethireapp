@@ -84,17 +84,17 @@
 .btn-flat {
   font-family: monospace;
   color: white;
-  padding: 2px 25px;
+  padding: 4px 15px;
   border-radius: 5px;
-  background: #1EDD88;
+  background: skyblue;
   transition: background 0.3s ease;
-  margin: 8px -5px -24px 8px;
+  margin: 0px -36px 0px 89px;
   height: 28px;
   text-align: center;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: blue;
   color: white;
 }
 
@@ -163,9 +163,9 @@
 
   }
 
-  .buttons-index{
-    justify-content: center;
-    display: inline-grid;
-    margin: 10px 10px -10px 4px;
+  .btn-index-align {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
   }
 

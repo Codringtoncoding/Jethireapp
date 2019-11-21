@@ -2,8 +2,12 @@
   <h1><%= @plane.name %></h1>
   <%= link_to "Back to all planes", planes_path %>
   <br>
-  <%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill  %>
 
+  <% if @plane.photo.attached? %>
+  <%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill  %>
+  <% else %>
+  <%= image_tag "learjet_60.jpg", height: 300, width: 400, crop: :fill %>
+  <% end %>
 
 <div class="row">
     <div class="col-sm-12 col-md-6">

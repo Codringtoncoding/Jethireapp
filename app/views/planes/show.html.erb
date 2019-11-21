@@ -4,6 +4,12 @@
     <h1><%= @plane.name %> </h1>
   <br>
 
+  <% if @plane.photo.attached? %>
+  <%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill  %>
+  <% else %>
+  <%= image_tag "learjet_60.jpg", height: 300, width: 400, crop: :fill %>
+  <% end %>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -48,6 +54,7 @@
         </tbody>
       </table>
     </div>
+
       <div>
         <span class="buttons" center>
         <%if @plane.user = current_user%>
@@ -55,8 +62,35 @@
           <%= link_to "Book Plane", new_plane_booking_path(@plane), class: "btn btn-primary buttons-home" %>
           <%= link_to "Back to all planes", planes_path, class: "btn btn-primary buttons-home" %>
           <%end%>
+
   </div>
+
+<br>
+
+  <h3>Reviews</h3>
+<% if @plane.reviews.empty? %>
+    <p>Be the first to let a review</p>
+  <% else %>
+    <ul class="list-group">
+      <% @plane.reviews.each do |review| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-primary badge-pill">
+            <% counter = 0 %>
+            <% 5.times do %>
+              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <% counter += 1 %>
+            <% end %>
+          </span>
+          <%= review.content %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<div>
+  <%= render "reviews/new", plane: @plane, review: @review %>
 </div>
+<!-- </div> -->
 
 
 

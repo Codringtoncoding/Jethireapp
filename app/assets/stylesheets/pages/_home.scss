@@ -1,26 +1,51 @@
-// Specific CSS for your home-page
-
-// .homepage-container {
-
-//   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("https://www.wearefinn.com/media/2008/legacy-500-corporate-jet-overview.jpg");
-//   height: 450px;
-//   align: center;
-//   display: flex;
-//   justify-content: center;
 
 
+ .homepage-container {
 
-// }
+   background-image: linear-gradient(rgba(250,0,0,0.2), rgba(0,0,0,0.2)), url("https:www.wearefinn.com/media/2008/legacy-500-corporate-jet-overview.jpg");
+   height: 580px;
+   align: center;
+   display: flex;
+   justify-content: center;
+   image-fit: contain;
+ }
 
-// .title-home{
-//   font-family: "Open sans";
-//   color: white;
-//   justify-content: space-evenly;
-//   display: flex;
-// }
+ h2.title-home {
+  color: white;
+  display: flex;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: lighter;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0);
+ }
 
-// .buttons-home{
-//   justify-content: center;
-//   display: flex;
-// }
+ h1.title-home {
+  color: white;
+  display: flex;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: lighter;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0);
+ }
 
+
+ .buttons-home {
+   justify-content: center;
+   display: flex;
+ }
+
+
+#now-text {
+  color: white;
+  display: flex;
+  font-family: monospace;
+  font-size: 30px;
+  text-shadow: -2px 1px 1px rgba(200,0,0,0.9);
+  border-radius: 5px;
+  padding-left: 15px;
+  box-shadow: none;
+}

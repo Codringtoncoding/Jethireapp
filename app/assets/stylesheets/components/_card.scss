@@ -91,10 +91,11 @@
   object-fit: cover;
 }
 
-.card-product h2 {
+.card-product  {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: red;
 }
 
 .card-product p {
@@ -107,6 +108,10 @@
 
 .card-product-infos {
   flex-grow: 1;
+  h2 {
+  color: red;
+
+  }
 }
 
 .card-product .card-product-infos {

@@ -1,4 +1,3 @@
-
 <div class="banner-1" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
   <div class="container flex">
     <% @planes.each do |plane| %>
@@ -9,8 +8,14 @@
           <h2><%=plane.name%></h2>
           <p>Price: £<%=plane.price%></p>
           <p>Capacity: <%=plane.capacity%> passengers</p>
+          <div class="btn-index-align">
+            <%= link_to "Check Details", plane_path(plane), class: "btn-flat" %>
+            <%= link_to "Book Plane", new_plane_booking_path(plane), class: "btn-flat"  %>
+          </div>
         </div>
+
           <%= link_to "View details", plane_path(plane), class: "btn-flat" %>
+
       </div>
     <%end%>
   </div>

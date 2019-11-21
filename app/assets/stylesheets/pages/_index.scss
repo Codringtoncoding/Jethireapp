@@ -84,14 +84,17 @@
 .btn-flat {
   font-family: monospace;
   color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #1EDD88;
+  padding: 4px 15px;
+  border-radius: 5px;
+  background: skyblue;
   transition: background 0.3s ease;
+  margin: 0px -36px 0px 89px;
+  height: 28px;
+  text-align: center;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: blue;
   color: white;
 }
 
@@ -125,15 +128,17 @@
 }
 
 .card-trip h2 {
-  font-size: px;
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
+  font-family: monospace;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  font-family: monospace;
 }
 
 
@@ -156,5 +161,11 @@
   font-family: monospace;
 
 
+  }
+
+  .btn-index-align {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
   }
 

@@ -1,16 +1,17 @@
-<body
-  class="body" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
+<head>
+ <title>Booking Completed</title>
+</head>
 
-  <div class="show-booking-container">
-    <div class ="div">
-  <h1>Thank you for flying with us !</h1>
-  </div>
+<body class="sky-pic" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
 
-
-  <%= link_to "Go to Dashboard", dashboard_path, class: "btn btn-light btn-sm" %>
-
-      </div>
+  <div class="d-flex flex-column align-items-center justify-content-center w-100 container-thank-you">
+    <div class ="text-thank-you">
+      <h1>Thank you for flying with us</h1>
+        <br>
+        <p>Check your upcoming flights in Dashboard</p>
     </div>
+      <div class="btn-go-to-dashboard">
+        <%= link_to "Go to Dashboard", dashboard_path %>
+      </div>
   </div>
-</div>
 </body>

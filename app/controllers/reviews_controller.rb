@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to plane_path(@plane)
     else
-     edirect_to plane_path(@plane)
+      redirect_to plane_path(@plane)
     end
   end
 

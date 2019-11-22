@@ -1,6 +1,12 @@
 class PlanesController < ApplicationController
   def index
     @planes = Plane.all
+
+    if params[:query].present?
+      @planes = Plane.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @planes = Plane.all
+    end
   end
 
   def new

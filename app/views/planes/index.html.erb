@@ -12,7 +12,9 @@
 
   <div class="container flex">
     <% @planes.each do |plane| %>
-      <% next unless plane.photos.attached? %>
+    <br>
+    <br>
+      <% next unless plane.photo.attached? %>
       <div class="card-product">
         <% if plane.photos.attached? %>
           <%# plane.photos.each do |photo| %>

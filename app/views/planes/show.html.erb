@@ -71,6 +71,9 @@
                 <% end %>
               </span>
               <%= review.content %>
+              <% if review.user == current_user %>
+                <%= link_to 'Delete review', review_path(review), method: :delete %>
+              <% end %>
             </li>
           <% end %>
         </ul>

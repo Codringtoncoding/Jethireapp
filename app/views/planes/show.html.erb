@@ -80,10 +80,10 @@
           </span>
           <%= review.content %>
                 <% if review.user == current_user %>
-                 <%= link_to review_path(review), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash"></i>
-                <% end %>
-                <% end %>
+                 <%= link_to review_path(review), method: :delete, data: { confirm: "Are you sure?" }  do %>
+                   <i class="fa fa-trash"></i>
+               <% end %>
+            <% end %>
         </li>
       <% end %>
     </ul>

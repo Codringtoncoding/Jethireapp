@@ -1,6 +1,8 @@
 <div class="banner-1" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
   <div class="container flex">
     <% @planes.each do |plane| %>
+    <br>
+    <br>
       <% next unless plane.photo.attached? %>
       <div class="card-product">
         <% if plane.photo.attached? %>

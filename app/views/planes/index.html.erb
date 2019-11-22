@@ -16,8 +16,11 @@
     <br>
       <% next unless plane.photo.attached? %>
       <div class="card-product">
-        <% if plane.photo.attached? %>
-        <%= cl_image_tag plane.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if plane.photos.attached? %>
+          <%# plane.photos.each do |photo| %>
+            <%= cl_image_tag plane.photos.first.key, height: 300, width: 400, crop: :fill %>
+          <%# end %>
+
         <div class="card-product-infos">
           <h2><%=plane.name%></h2>
           <p>Price: £<%=plane.price%></p>

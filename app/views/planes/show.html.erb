@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-<div class="container">
-  <body
-  class="body" style="background-image: url(https://images.unsplash.com/photo-1450005601738-ad61825d7281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80);">
-    <h1><%= @plane.name %> </h1>
-  <br>
 
-
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://www.wearefinn.com/media/2008/legacy-500-corporate-jet-overview.jpg" class="d-block w-100" alt="...">
-    <div class="carousel-caption d-none d-md-block">
-  </div>
-</div>
-    <div class="carousel-item">
-      <img src="https://www.wearefinn.com/media/2008/legacy-500-corporate-jet-overview.jpg" class="d-block w-100" alt="...">
-=======
 <div class="container d-flex flex-column">
   <div class="body">
     <div class="d-flex align-items-center justify-content-center">
       <h1> <%= @plane.name %> </h1>
->>>>>>> f3a9be2d0f48c215ede1801edf8d670b4893a1fb
     </div>
     <br>
     <div class="carousel-div">
@@ -67,43 +43,7 @@
         </tbody>
       </table>
     </div>
-<<<<<<< HEAD
 
-
-      <div>
-        <span class="buttons" center>
-        <%if @plane.user = current_user%>
-          <%= link_to "Delete", plane_path(@plane), method: :delete, class: "btn btn-primary buttons-home"  %>
-          <%= link_to "Book Plane", new_plane_booking_path(@plane), class: "btn btn-primary buttons-home" %>
-          <%= link_to "Back to all planes", planes_path, class: "btn btn-primary buttons-home" %>
-          <%end%>
-
-  </div>
-
-<br>
-
-  <h3>Reviews</h3>
-<% if @plane.reviews.empty? %>
-    <p>Be the first to let a review</p>
-  <% else %>
-    <ul class="list-group">
-      <% @plane.reviews.each do |review| %>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="badge badge-primary badge-pill">
-            <% counter = 0 %>
-            <% 5.times do %>
-              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-              <% counter += 1 %>
-            <% end %>
-          </span>
-          <%= review.content %>
-                <% if review.user == current_user %>
-                 <%= link_to review_path(review), method: :delete, data: { confirm: "Are you sure?" }  do %>
-                   <i class="fa fa-trash"></i>
-               <% end %>
-            <% end %>
-        </li>
-=======
     <div class="d-flex justify-content-center align-items-center">
       <span class="buttons d-flex align-items-center" center>
         <% if @plane.user == current_user %>
@@ -134,7 +74,6 @@
             </li>
           <% end %>
         </ul>
->>>>>>> f3a9be2d0f48c215ede1801edf8d670b4893a1fb
       <% end %>
       <div class="review-form">
         <div>

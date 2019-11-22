@@ -14,7 +14,7 @@
     <% @planes.each do |plane| %>
     <br>
     <br>
-      <% next unless plane.photo.attached? %>
+      <% next unless plane.photos.attached? %>
       <div class="card-product">
         <% if plane.photos.attached? %>
           <%# plane.photos.each do |photo| %>

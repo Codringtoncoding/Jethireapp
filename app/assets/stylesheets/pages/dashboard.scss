@@ -1,7 +1,18 @@
+.container-dashboard {
+  background-image: url("https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%px;
+  background-size: cover;
+  //width: 915px;
+  //height: 610px;
+}
+
 .title-dashboard {
   font-family: monospace;
   text-align: center;
-  color: skyblue;
+  color: white;
   padding: 25px 0;
 }
 
@@ -15,10 +26,10 @@
     -webkit-box-align: center;
     align-items: center;
     padding: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     border-radius: 5px;
     justify-content: space-around;
-    background-color: skyblue;
+    background-color: rgba(173, 216, 230, 0.3);
 }
 
 
@@ -36,7 +47,8 @@
 }
 
 .card-info:hover {
-  background-color: #f4f4f4;
+  background-color: rgba(173, 216, 230, 0.0);
+  transition: 3s;
 }
 
 .bold-text {

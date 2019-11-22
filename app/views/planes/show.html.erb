@@ -30,13 +30,12 @@
 
       </table>
     </div>
-    <div class="col-sm-12 col-md-6">
-    <%if @plane.user = current_user%>
-     <%= link_to "Delete", plane_path(@plane), method: :delete, class: "btn btn-light btn-sm" %>
-      <%end%>
-    <div><%= link_to "book!", new_plane_booking_path(@plane), class: "btn btn-primary btn-lg"  %></div>
-  </div>
 
+
+    <%if @plane.user == current_user %>
+      <%= link_to "Delete", plane_path(@plane), method: :delete, class: "btn-flat" %>
+    <%end%>
+    <div><%= link_to "Book Plane", new_plane_booking_path(@plane), class: "btn-flat"  %></div>
 
   </div>
 
@@ -56,6 +55,11 @@
               <% counter += 1 %>
             <% end %>
           </span>
+                <% if review.user == current_user %>
+                 <%= link_to review_path(review), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash"></i>
+                <% end %>
+                <% end %>
           <%= review.content %>
         </li>
       <% end %>

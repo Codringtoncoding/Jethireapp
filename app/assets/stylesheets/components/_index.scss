@@ -35,16 +35,16 @@
 //   margin-top: 8px;
 // }
 
- .card-product .card-product-infos {
-   padding: 16px;
+ .card-product .card-product-infos p {
+   margin-bottom: 8px;
    font-family: monospace;
  }
 
- h2 {
-   color: white;
+ .card-product .card-product-infos h2 {
    font-weight: bold;
    text-align: center;
    font-family: monospace;
+   font-size: 28px;
  }
 
 // h3 {

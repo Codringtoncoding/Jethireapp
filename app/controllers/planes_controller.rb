@@ -1,6 +1,12 @@
 class PlanesController < ApplicationController
   def index
     @planes = Plane.all
+
+    if params[:query].present?
+      @planes = Plane.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @planes = Plane.all
+    end
   end
 
   def new
@@ -33,6 +39,6 @@ class PlanesController < ApplicationController
 
   def plane_params
     # only keep what we want from the params
-    params.require(:plane).permit(:name, :capacity, :price, :photo)
+    params.require(:plane).permit(:name, :capacity, :price, photos: [])
   end
 end
